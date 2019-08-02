@@ -16,6 +16,10 @@ public class Board {
         response = true;
     }*/
 
+    public String getPlayerInCell(int row, int col){
+        return (cells[row][col] == 1)? "You":"Comp";
+    }
+
     public Integer spacesAvailable(){
         int availableCells =0;
         for(int x =0; x < cells.length; x++){
@@ -50,9 +54,14 @@ public class Board {
         for(int y = 0; y < cells[row].length; y++){
             if(isCellEmpty(row, y)) {
                 output += String.format("[r:%d,c:%d]", row, y);
-                if (y != cells[row].length - 1) {
-                    output += ",";
-                }
+
+            }else {
+                String playerOrComputer = getPlayerInCell(row, y);
+                String message = String.format("[%s]", playerOrComputer);
+                output += message;
+            }
+            if (y != cells[row].length - 1) {
+                output += ",";
             }
         }
         return output;

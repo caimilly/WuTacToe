@@ -39,9 +39,9 @@ public class BoardTest {
 
     @Test
     public void displaySpacesAvailableTest2(){
-        String expected = "[r:0,c:1],[r:0,c:2]\n"+
-                "[r:1,c:0],[r:1,c:1],[r:1,c:2]\n"+
-                "[r:2,c:0],[r:2,c:1],[r:2,c:2]";
+        String expected = "[You],[r:0,c:1],[r:0,c:2]\n"+
+                          "[r:1,c:0],[r:1,c:1],[r:1,c:2]\n"+
+                          "[r:2,c:0],[r:2,c:1],[r:2,c:2]";
         int player1 = 1;
         int row = 0;
         int col = 0;
